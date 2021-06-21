@@ -6,6 +6,7 @@ import Button from '../../Button/Button';
 import Icon from '../../Icon/Icon';
 import { MenuItemProps } from './MenuItem';
 import { LinkMenuItemDefinition } from './LinkMenuItem';
+import { SIDEBAR_TRANSITION_DURATION } from '../Sidebar';
 
 export const PageExplorerMenuItem: React.FunctionComponent<MenuItemProps<PageExplorerMenuItemDefinition>> = (
   { path, item, state, dispatch }) => {
@@ -23,7 +24,7 @@ export const PageExplorerMenuItem: React.FunctionComponent<MenuItemProps<PageExp
       // to finish before making it invisible
       setTimeout(() => {
         setIsVisible(false);
-      }, 300);
+      }, SIDEBAR_TRANSITION_DURATION);
     }
   }, [isOpen]);
 
